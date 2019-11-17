@@ -19,7 +19,6 @@ app.get("/hello", function(req, res) {
 });
 
 app.post("/api/fileanalyse", upload.single("upfile"), (req, res, next) => {
-  //{"name":"download.jfif","type":"image/jpeg","size":52398}
   res.json({
     name: req.file.originalname,
     type: req.file.mimetype,
